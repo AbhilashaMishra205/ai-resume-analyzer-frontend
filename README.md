@@ -1,16 +1,44 @@
-# React + Vite
+# AI Resume Analyzer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack AI-powered web application that analyzes resumes against job descriptions and provides ATS match scores with actionable improvement suggestions.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+[View Live App](https://ai-resume-backend-d41d.onrender.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
+- Upload resume as PDF or DOCX
+- Paste job description
+- Get ATS match score instantly
+- See matched skills (green) and missing skills (red)
+- AI-powered resume summary rewriting
+- AI-powered bullet point enhancement
+- Explain missing skills using AI
 
-## React Compiler
+## 🛠️ Tech Stack
+**Frontend:**
+- React + Vite
+- Axios
+- pdfjs-dist (PDF parsing)
+- mammoth (DOCX parsing)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Backend:**
+- Node.js + Express
+- OpenAI GPT-4o-mini
+- Deployed on Render
 
-## Expanding the ESLint configuration
+##  How It Works
+1. User uploads resume (PDF/DOCX) — text extracted in browser
+2. User pastes job description
+3. Frontend sends both to backend via POST /api/analyze
+4. Backend runs keyword matching algorithm
+5. Returns match score, matched skills, missing skills, and suggestions
+6. AI features call OpenAI API for rewriting and explanations
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+##  Project Structure
+ai-resume-analyzer/
+├── ai-resume-analyzer-frontend/   # React + Vite frontend
+└── ai-resume-backend/             # Node.js + Express backend
+
+##  Author
+Abhilasha Mishra
+[LinkedIn](https://www.linkedin.com/in/abhilasha-mishra-206b1a214/)
