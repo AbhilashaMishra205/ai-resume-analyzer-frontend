@@ -2,9 +2,6 @@
 
 A full-stack AI-powered web application that analyzes resumes against job descriptions and provides ATS match scores with actionable improvement suggestions.
 
-## 🚀 Live Demo
-[View Live App](https://ai-resume-backend-d41d.onrender.com)
-
 ## ✨ Features
 - Upload resume as PDF or DOCX
 - Paste job description
